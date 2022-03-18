@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form>
+    <b>Amount</b></br>
+    <input type="text" id="sotienvietnam">
+    <b for="">From Curency</b>
+    <select>
+        <option value="VietNam">VietNam</option>
+    </select>
+    <b for="">To Currency</b>
+    <select>
+        <option value="USD">USD</option>
+    </select>
+    <button type="button" onclick="Doitien()">Convert</button>
+    <h4 id="ketqua"></h4>
+</form>
+<script>
+    function Doitien() {
+        const TYGIADOLA = 23000
+        let VND = document.getElementById("sotienvietnam").value;
+        let tienDo = VND * TYGIADOLA;
+        document.getElementById("ketqua").innerHTML ="Result:"+tienDo
+    }
+</script>
+</body>
+</html>

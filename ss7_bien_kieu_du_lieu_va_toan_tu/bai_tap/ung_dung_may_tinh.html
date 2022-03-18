@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<form>
+    <input type="text" id="giatri1">
+    <input type="text" id="giatri2"><br><br>
+    <input type="button" onclick="phepcong()" value=Addition(+)>
+    <input type="button" onclick="pheptru()" value=Subtraction(-)>
+    <input type="button" onclick="phepnhan()" value=Multiplicatio(X)>
+    <input type="button" onclick="phepchia()" value=Divison(/)>
+</form>
+<p>Kết quả là: <span id="ketqua"></span></p>
+</body>
+<script>
+    function phepcong(){
+        var so1=+document.getElementById("giatri1").value;
+        var so2=+document.getElementById("giatri2").value
+        var tong=so1+so2;
+        document.getElementById("ketqua").innerHTML=tong
+    }
+    function pheptru(){
+        var so1=document.getElementById("giatri1").value;
+        var so2=document.getElementById("giatri2").value
+        var hieu=so1-so2;
+        document.getElementById("ketqua").innerHTML=hieu
+    }
+    function phepnhan(){
+        var so1=document.getElementById("giatri1").value;
+        var so2=document.getElementById("giatri2").value
+        var tich=so1*so2;
+        document.getElementById("ketqua").innerHTML=tich
+    }
+    function phepchia(){
+        var so1=document.getElementById("giatri1").value;
+        var so2=document.getElementById("giatri2").value
+        var thuong=so1/so2;
+        document.getElementById("ketqua").innerHTML=thuong
+    }
+</script>
+</body>
+</html>
