@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Câu lệnh witch-case</title>
 </head>
 <body>
-$END$
+<form>
+    <input type="text" id="months"/>
+    <input type="button" onclick="month()" value="Tính số ngày"/>
+</form>
+<h4 id="ketqua"></h4>
+<script>
+    function month (){
+        let month =+document.getElementById("months").value;
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12: document.getElementById("ketqua").innerHTML= 'Tháng ' + month + ' có 30 ngày';
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11: document.getElementById("ketqua").innerHTML= 'Tháng ' +  month + 'có 30 ngày';
+            break;
+            case 2: document.getElementById("ketqua").innerHTML= 'Tháng ' + month + 'có 28 ngày hoặc 29 ngày';
+            break;
+            default:
+                break;
+        }
+    }
+
+</script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Thoigiangoi = parseInt(prompt("so phut ma ho gia dinh da su dung:"));
+    let cuocPhi;
+    if (Thoigiangoi >= 4000) {
+        cuocPhi = Thoigiangoi * 400;
+        document.write("cuoc phi ma ho gia dinh phai tra la:" + cuocPhi);
+    } else if (Thoigiangoi >= 2500) {
+        cuocPhi = Thoigiangoi * 300;
+        document.write("cuoc phi ma ho gia dinh phai tra la:" + cuocPhi);
+    } else if (Thoigiangoi >= 1000) {
+        cuocPhi = Thoigiangoi * 200;
+        document.write("cuoc phi ma ho gia dinh phai tra la:" + cuocPhi);
+    } else {
+        cuocPhi = Thoigiangoi * 100;
+        document.write("cuoc phi ma ho gia dinh phai tra la:" + cuocPhi);
+    }
+</script>
+</body>
+</html>

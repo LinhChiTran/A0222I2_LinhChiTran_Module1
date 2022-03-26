@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc 2</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("Nhập a: "));
+    let b = parseFloat(prompt("Nhập b: "));
+    let c = parseInt(prompt("Nhập c:"));
+    let d =  4-(b*b - 4*a*c);
+    if (d < 0) {
+        document.write("Phương trình vô số nghiệm");
+        if (d != 0) {
+            document.write("Phương trình một nghiệm");
+                let x = -b/(2*a);
+                document.write("Phương trình có nghiệm là: <br>x = " + x);
+            }
+        }
+    } else if(d > 0) {
+        document.write("Phương trình hai nghiệm");
+        let x1 = (-b + -√ d)/(2*a);
+    }
+
+
+</script>
+</body>
+</html>
