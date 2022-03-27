@@ -9,21 +9,30 @@
     let a = parseFloat(prompt("Nhập a: "));
     let b = parseFloat(prompt("Nhập b: "));
     let c = parseInt(prompt("Nhập c:"));
-    let d =  4-(b*b - 4*a*c);
-    if (d < 0) {
-        document.write("Phương trình vô số nghiệm");
-        if (d != 0) {
-            document.write("Phương trình một nghiệm");
-                let x = -b/(2*a);
-                document.write("Phương trình có nghiệm là: <br>x = " + x);
+    let d =  b*b - 4*a*c;
+    if(a == 0) {
+        if(b == 0){
+            if (c == 0) {
+                alert('Phương trình vô số nghiệm')
+            }
+            else{
+                alert(`Phương trình vô nghiệm`)
             }
         }
-    } else if(d > 0) {
-        document.write("Phương trình hai nghiệm");
-        let x1 = (-b + -√ d)/(2*a);
+        else{
+           alert('Phuong trinh co nghiem duy nhat: '+(-c/b))
+        }
     }
-
-
+    else if (d > 0){
+        x1 = (-b + Math.sqrt(d))/(2*a)
+        x2 = (-b - Math.sqrt(d))/(2*a)
+        alert("Phương trình có hai nghiệm phân biệt là x1 = " + x1 + " và x2 = " + x2)
+    } else if ( d == 0) {
+        let x = -b/2*a
+        alert('Phương trình có nghiệm kép: x1 = x2 = '+ x)
+    } else {
+        alert('Phương trình vô nghiệm ')
+    }
 </script>
 </body>
 </html>
