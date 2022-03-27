@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 10</title>
+</head>
+<body>
+    <script>
+        let sodien = parseInt(prompt("Nhập số điện nhà bạn dùng"));
+        let tiendien ;
+        if(sodien <=50){
+            tiendien = 1484 * sodien;
+        }else if(sodien<=100){
+            tiendien = (50*1484) + ((sodien-50)*1533);
+        }else if(sodien<=200){
+            tiendien = (50*1484) + (50*1533) + ((sodien-100)*1786);
+        }else if(sodien<=300){
+            tiendien = (50*1484) + (50*1533) + (100*1786) + ((sodien - 200)*2242);
+        }else if(sodien<=400){
+            tiendien = (50*1484) + (50*1533) + (100*1786) + (100*2242) + ((sodien -300)*2503);
+        }else{
+            tiendien = (50*1484) + (50*1533) + (100*1786) + (100*2242) + (100*2503) + ((sodien -400)*2583);
+        }
+        document.write("Số điện nhà bạn là "+ sodien);
+        document.write("<br>Số tiền điện là "+tiendien + "VNĐ");
+    </script>
+</body>
+</html>
