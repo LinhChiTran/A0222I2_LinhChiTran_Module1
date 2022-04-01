@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let n = parseInt(prompt("input so fibonacci can hien thi:"))
+    let a = 0;
+    let b = 1;
+    let output = " ";
+
+    for (let i = 1; i <= n; i++) {
+        if (i == 1 || i == 2) {
+            output += "1 ";
+            a = 1;
+            b = 1;
+            continue;
+        }else {
+            let c = a + b;
+            output +=  c +" ";
+            a = b;
+            b = c;
+        }
+    }
+    document.write(output);
+</script>
 </body>
 </html>

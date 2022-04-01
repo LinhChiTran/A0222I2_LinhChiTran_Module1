@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let x = parseInt(prompt("Nhập vào số nguyên tố đầu tiên: "));
+    let status = 1;
+    let num = 3;
+    if(x >= 1) {
+        document.write(x + " số nguyên tố đầu tiên là: <br>");
+        document.writeln(2);
+    }
+    for(let i = 2; i <= x;) {
+        for( let j = 2; j <= Math.sqrt(num); j++) {
+            if(num % j === 0) {
+                status = 0;
+                break;
+            }
+        }
+        if(status !== 0) {
+            document.write(num + " ");
+            i++;
+        }
+        status = 1;
+        num++;
+    }
+
+</script>
 </body>
 </html>

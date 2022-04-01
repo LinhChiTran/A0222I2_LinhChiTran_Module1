@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let text="";
+    for (let i =1;i <= 100; i++){
+        if (i == 99){
+            text += i + " Đã hoàn thành" + "<br>";
+            document.write(text);
+            continue;
+        }
+        document.write(i +"<br>");
+    }
+</script>
 </body>
 </html>

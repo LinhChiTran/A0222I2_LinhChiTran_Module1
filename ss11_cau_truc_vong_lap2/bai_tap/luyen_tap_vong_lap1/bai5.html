@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let f1=0;
+    let f2=1;
+    let f3=" ";
+    let tong = 1;
+    for(let i=2; i<=20; i++) {
+        if (i===0){
+            f1 = 1;
+            f2 = 2;
+            f3 += f1 + " ";
+            tong += f1;
+        } else {
+            f3 = f2 + f1;
+            f1 = f2;
+            f2 = f3;
+            f3 += f1 + " ";
+            tong += f3;
+        }
+    }
+    document.write(" Số đầu tiên trong dãy fibonacci là :" + f3 + "<br>");
+    document.write("Tổng của các số trong dãy là :" + tong);
+</script>
 </body>
 </html>

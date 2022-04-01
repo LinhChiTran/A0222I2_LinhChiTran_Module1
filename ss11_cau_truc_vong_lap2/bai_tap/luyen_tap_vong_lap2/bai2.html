@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let n = parseInt(prompt("Nhập một số nguyên dương :"));
+    let giaiThua = 1;
+    if (n < 0){
+        alert('số nguyên phải lớn hơn 0');
+    } else if (n == 0||n ==1){
+        giaiThua = 1;
+    } else {
+        for (let index =1;index <= n; index++) {
+            giaiThua *= index;
+        }
+    }
+    document.write(giaiThua);
+</script>
 </body>
 </html>

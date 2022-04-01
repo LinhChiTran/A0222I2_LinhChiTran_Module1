@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let i=1;
+    let dem=0,tong=0;
+    while(dem <= 30) {
+        if(i %7 ===0) {
+            dem += 1;
+            tong += i;
+        }
+        i += 1;
+    }
+   document.write(tong);
+
+</script>
 </body>
 </html>

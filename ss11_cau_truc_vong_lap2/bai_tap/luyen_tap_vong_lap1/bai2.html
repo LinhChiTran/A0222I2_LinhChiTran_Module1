@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+   let n = 0;
+   do {
+       n = parseInt(prompt("Nhập nhiệt độ."));
+        if(n < 20){
+            alert("Tăng nhiệt độ.");
+           } else if (n > 100){
+                alert("Giảm nhiệt độ.");
+          } else {
+                document.write("Nhiet binh thuong: "+ n);
+        }
+   }while ( n <20 || n >100);
+
+</script>
 </body>
 </html>
