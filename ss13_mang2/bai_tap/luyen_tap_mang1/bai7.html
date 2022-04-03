@@ -6,7 +6,24 @@
 </head>
 <body>
 <script>
-    
+    let a = parseInt(prompt(" Nhập số :"));
+    let number = [], mangV = true;
+    let arr = [];
+    for (let i = 0;i < a ; i++){
+        number[i] = parseInt(prompt("Nhập số nguyên : "));
+        if (number[i] === "V"){
+            mangV = false;
+        }
+        if (number[i] !== "V"){
+         arr.push(number[i])
+        }
+    }
+    document.write("Mảng là [ " + number + "] <br>");
+    if (mangV === false ){
+        document.write("Đã xóa phần tử V .Mảng là [" + arr +"]<br>");
+    }else {
+        document.write("V is not in the array");
+    }
 </script>
 </body>
 </html>
