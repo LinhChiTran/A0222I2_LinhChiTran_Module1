@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    input[type=text] {
+        width: 300px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        padding: 12px 10px 12px 10px;
+    }
+    submit {
+        border-radius: 2px;
+        padding: 10px 32px;
+        font-size: 16px;
+    }
+</style>
+<body>
+<h2>Từ Điển Anh - Việt</h2>
+<form method="get">
+    <input type="text" id="VietNam" name="search" placeholder="Nhập từ cần tìm"/>
+    <input type = "submit" id = "submit" onclick="dich" value = "Tìm"/>
+    <p id = "result"></p>
+</form>
+<script>
+    let English = Array ("hello","how","book","computer,thanks");
+    let Vietnamese = array("xin chào","thế nào","quyển vở","máy tính , cảm ơn");
+    function dich () {
+          let x = document.getElementById("VietNam").value
+        console.log(x)
+        for (let i =0; i <English.length;i++){
+            if (English[i] == x ){
+                document.getElementById("result").innerHTML = Vietnamese[i];
+                break;
+            }
+        }
+    }
+</script>
+</body>
+</html>

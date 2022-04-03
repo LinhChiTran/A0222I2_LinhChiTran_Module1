@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+    let max = 0;
+    let tb = 0;
+    for (let i = 0; i < number.length; i++) {
+        tb = (number[i] + tb)
+        if (number[i] > max) {
+            max = number[i]
+        }
+    }
+    tb = tb / 10
+    document.write(tb + "<br>" + max)
+</script>
+</body>
+</html>

@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let inputPhysics;
+    let inputChemistry;
+    let inputBiological;
+
+    inputPhysics = parseInt(prompt("Hãy nhập điểm của lý vào đây"));
+    inputChemistry = parseInt(prompt("Hãy nhập điểm của hóa vào đây"));
+    inputBiological = parseInt(prompt("Hãy nhập điểm của sinh vào đây"));
+
+    let average = (inputPhysics + inputChemistry +inputBiological)/3;
+    document.write("Điểm trung bình là : " + average +'</br>');
+    let total = (inputPhysics + inputChemistry + inputBiological);
+    document.write("Tổng của điểm là :" + total);
+
+</script>
 </body>
 </html>

@@ -28,18 +28,16 @@
         <td>
             <button type="button" onclick="Doitien()">Convert</button>
         </td>
-        <h4 id="ketqua"></h4>
-    </table>
-</form>
+     </table>
+   </form>
+ <h4 id="ketqua"></h4>
 <script>
     function Doitien() {
         const TYGIADOLA = 23000
         let VND = document.getElementById("sotienvietnam").value;
         let tienDo = VND * TYGIADOLA;
-        document.getElementById("ketqua").innerHTML ="Result:"+tienDo
+        document.getElementById("ketqua").innerHTML ="Result:"+tienDo+"VND"
     }
 </script>
-
-
 </body>
 </html>

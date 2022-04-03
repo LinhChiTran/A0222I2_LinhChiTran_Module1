@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arraySo =[];
+    let arraySoAm=[];
+    for (let i =0; i<10; i++){
+        arraySo[i] = parseInt(prompt("Nhập số vào mảng :"));
+        if (arraySo[i] < 0){
+            arraySoAm.push(arraySo[i]);
+        }
+    }
+    document.write("Mảng số là [" + arraySo + "] <br>");
+    document.write("Mảng các số âm gồm " + arraySoAm.length + " phần tử. Mảng số nguyên âm [" + arraySoAm + "] <br>");
+</script>
+</body>
+</html>
