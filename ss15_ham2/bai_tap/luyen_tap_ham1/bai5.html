@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="ngoisao"/>
+    <button type="button" onclick="timNgoiSao(document.getElementById('ngoisao').value)">Tìm tên chòm sao</button>
+    <p id="result"></p>
+    <script>
+        let ngoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let chomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        function timNgoiSao(arr) {
+            for(let i = 0; i < arr1.length; i++) {
+                if(arr1[i] === arr.toString()) {
+                    document.getElementById("result").innerHTML = "Ngôi sao tương tự là: " + arr2[i];
+                } else {
+                    document.getElementById("result").innerHTML = "Không có ngôi sao tương tự";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

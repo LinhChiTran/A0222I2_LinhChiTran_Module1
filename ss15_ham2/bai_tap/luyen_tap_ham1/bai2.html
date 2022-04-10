@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="submit" onclick="out()" value="Result"/>
+<script>
+    function hienThi(doiSo) {
+        doiSo++;
+        return doiSo;
+    }
+    function out() {
+        let num = parseInt(prompt("Nhập giá trị: "));
+        let kq = hienThi(num);
+        alert(kq);
+    }
+
+</script>
+</body>
+</html>

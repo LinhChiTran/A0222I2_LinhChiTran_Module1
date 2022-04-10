@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập một số nguyên "));
+    function tinhGiaiThua(giaiThua) {
+        let temp = 1;
+        if (giaiThua < 0) {
+            alert('số nguyên phải lớn hơn 0');
+        } else if (giaiThua === 0 || giaiThua === 1) {
+            temp = 1;
+        } else {
+            for (let index = 1; index <= giaiThua; index++) {
+                temp *= index;
+            }
+        }
+        document.write(temp);
+    }
+
+    tinhGiaiThua(n);
+</script>
+</body>
+</html>

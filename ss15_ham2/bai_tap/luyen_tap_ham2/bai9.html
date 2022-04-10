@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTraMang(kyTu,mang) {
+        let index = 0;
+        for(let i = 0; i < mang.length; i++) {
+            if(kyTu === mang[i]) {
+                index++;
+            }
+        }
+        if(index > 0) {
+            return index;
+        }
+        return  -1;
+    }
+    let arr = ["a", "b", "c", "t", "l", "v","n", "h", "i","*","+"];
+    let check = prompt("Nhập một ký tự bất kỳ: ");
+    document.write("Mảng bao gồm [" + arr + "] <br>");
+    let kiemTra = kiemTraMang(check, arr);
+    if(kiemTra > 0) {
+        document.write("Có ký tự [" + check + "] trong mảng");
+    } else {
+        document.write("Không có trong mảng");
+    }
+</script>
+</body>
+</html>
