@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(doC) {
+            this.doC = doC;
+        }
+        getDoC(){
+            return this.doC;
+        }
+        getChangeCtoF(){
+            return ((9 * this.getDoC()) / 5) + 32;
+        }
+        getChangeCtoK(){
+            return this.getDoC() + 273;
+        }
+    }
+    let temperature = new Temperature(25);
+    let doC =temperature.getDoC();
+    let changeCtoF = temperature.getChangeCtoF();
+    let changeCtoK = temperature.getChangeCtoK();
+    document.write("Nhiệt độ " + doC + " C = " + changeCtoF + " F <br>");
+    document.write("Nhiệt độ " + doC + " C = " + changeCtoK + " K");
+</script>
+</body>
+</html>

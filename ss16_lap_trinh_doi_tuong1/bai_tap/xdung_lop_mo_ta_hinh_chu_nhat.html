@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <script>
+  class Rectangle {
+      constructor(length,width) {
+          this.length = length;
+          this.width = width;
+      }
+        getLength(){
+          return this.length ;
+        }
+        getWidth(){
+          return this.width ;
+        }
+        getDienTich(){
+          return this.getLength() * this.getWidth() ;
+        }
+        getChuVi(){
+          return (this.width + this.length) * 2;
+        }
+  }
+  let myRectangle = new Rectangle (5,10);
+  let dienTich = myRectangle.getDienTich();
+  let chuVi = myRectangle.getChuVi();
+  alert("Diện tích là :" + dienTich  + "Chu vi là: " + chuVi);
+ </script>
+</body>
+</html>
