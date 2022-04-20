@@ -2,9 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    class Apple {
+        constructor() {
+            this.weight = 10;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = this.weight - weight;
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getGender() {
+            return this.gender;
+        }
+
+        setGender(gender) {
+            this.gender = gender;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight() {
+            this.weight++
+        }
+
+        say(messenger) {
+            console.log(messenger);
+        }
+
+        checkApple(apple) {
+            if (apple.weight > 0) {
+                return apple.weight;
+            } else {
+                return 0;
+            }
+        }
+
+        eat(apple) {
+            if (this.checkApple(apple) > 0) {
+                this.setWeight();
+                apple.setWeight(1);
+            }
+        }
+    }
+
+    let apple1 = new Apple();
+    let human1 = new Human("Trung", "Nam", 45);
+    let human2 = new Human("Kim", "Nữ", 35);
+
+    human1.say("Chào " + human2.getName());
+    human2.say("Chào " + human1.getName());
+
+    document.write('Cân năng của quả táo = ' + apple1.weight + "<br>");
+    document.write('Cân năng của Nam = ' + human1.weight + "<br>");
+    document.write('Cân năng của Nữ = ' + human2.weight + "<br>");
+    human1.eat(apple1);
+    document.write('Sau khi ăn táo = ' + apple1.weight + "<br>");
+    document.write('Cân năng của Nam = ' + human1.weight + "<br>");
+    human2.eat(apple1);
+    document.write('Sau khi ăn táo = ' + apple1.weight + "<br>");
+    document.write('Cân năng của Nữ = ' + human2.weight + "<br>");
+</script>
 </body>
 </html>

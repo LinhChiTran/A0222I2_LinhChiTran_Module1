@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class SwitchButton {
+        constructor() {
+            this.status = false;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        getConnectToLamp(ElectricLamp) {
+            return this.lamp = ElectricLamp;
+        }
+
+        getTurnOn() {
+            this.status = true;
+            this.lamp.turnOn();
+        }
+
+        getTurnOff() {
+            this.status = false;
+            this.lamp.turnOff();
+        }
+    }
+
+    class ElectricLamp {
+        constructor() {
+            this.status = false;
+        }
+        turnOn(){
+            this.status = true;
+            alert("đèn đang bật")
+        }
+        turnOff(){
+            this.status = false;
+            alert("đèn đang tắt.")
+        }
+        getLampInfo(){
+            if(this.status){
+                return "đang bật"
+            }else {
+                return "đang tắt"
+            }
+        }
+    }
+
+    let button = new SwitchButton();
+    let lamp = new ElectricLamp();
+    document.write("Đèn mới tạo: " + lamp.getLampInfo() +"<br>")
+    button.getConnectToLamp(lamp);
+    document.write("Tạo kết nối với công tắc : " + lamp.getLampInfo() + "<br>")
+    button.getTurnOn();
+    document.write("Sau khi bật công tắc : " + lamp.getLampInfo() + "<br>");
+    button.getTurnOff();
+    document.write("Sau khi tắt công tắc : " + lamp.getLampInfo() + "<br>");
+
+
+
+
+</script>
+</body>
+</html>

@@ -2,9 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    class Battery {
+        constructor(energy) {
+            this.energy = energy;
+        }
+        getEnergy() {
+            return this.energy;
+        }
+        getDecreaseEnergy(){
+            if (this.energy > 0) {
+                this.energy--;
+            }
+        }
+    }
+    class FlashLamp {
+        constructor(battery) {
+            this.battery = battery;
+        }
+        setBattery(value){
+            this.battery = value;
+        }
+        getBatteryInfo(){
+            return this.battery.getEnergy();
+        }
+        getLight(){
+            this.status = status;
+            if(this.status){
+                alert("Lighting");
+            } else {
+                alert("Not lighting");
+            }
+        }
+        getTurnOn(){
+            this.status = true;
+        }
+        getTurnOff(){
+            this.status = false;
+        }
+    }
+    let battery = new Battery();
+    battery.getEnergy(10);
+
+    let flashLamp = new FlashLamp();
+    flashLamp.setBattery(battery);
+
+    document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+    flashLamp.getLight();
+
+    document.write("Turn on <br/>")
+    flashLamp.getTurnOn();
+    flashLamp.getLight();
+    document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+
+    document.write("Turn off<br/>")
+    flashLamp.getTurnOff();
+    flashLamp.getLight();
+</script>
 </body>
 </html>
